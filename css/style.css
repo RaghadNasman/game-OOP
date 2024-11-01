@@ -1,0 +1,133 @@
+/* global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.text-gray {
+    color: #bfc1c8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* custom */
+
+.fs-small {
+    font-size: 14px;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #272b30e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1111111;
+}
+.load {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    border-top: 4px solid white;
+    border-right: 4px solid transparent;
+    animation: loading 1s linear infinite reverse;
+
+}
+.load::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #ff3d00;
+    border-bottom: 4px solid transparent;
+    animation: loading2 .5s linear infinite reverse;
+}
+
+@keyframes loading {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+
+/* custom */
+body {
+    overflow-x: hidden;
+    font-family: cursive;
+}
+
+#games {
+    background-color: #272B30;
+    min-height: 100vh;
+}
+
+#games header img {
+    height: 30vh;
+}
+
+#games nav {
+    background-color: #3A497B;
+    transform: translateY(-50%);
+    position: sticky;
+    top: 35px;
+    box-shadow: 0 0 15px 5px #000000b4;
+    border: none;
+    z-index: 111;
+}
+
+#games nav .nav-link {
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+#games nav .nav-link.active,
+#games nav .nav-link:hover {
+    color: #09c;
+}
+
+#games .row .col-content {
+    filter: grayscale(.6);
+    transition: .5s;
+}
+
+#games .row .col-content:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* details section */
+#details {
+    min-height: 100vh;
+    background-color: #272B30;
+}
+
+#details .close-btn i {
+    color: rgba(255, 255, 255, 0.4);
+    transition: .2s;
+    /* color: red; */
+}
+
+#details .close-btn i:hover {
+    color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,19 @@
+@media screen and (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1248px;
+    }
+}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:567px) {}
